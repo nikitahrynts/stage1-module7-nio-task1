@@ -25,9 +25,7 @@ public class FileReader {
             for (long i = 0; i < fileSize; i++) {
                 result.append((char) buffer.get());
             }
-
-            result.trimToSize();
-            String[] attrs = result.toString().trim().split("\r\n");
+            String[] attrs = result.toString().split("\r\n");
             for (String attr : attrs) {
                 processData(attr);
             }
